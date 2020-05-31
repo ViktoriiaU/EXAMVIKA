@@ -1,0 +1,330 @@
+*, :after, :before {
+  margin: 0;
+  padding: 0;
+	outline: 0;
+	border: 0;
+	text-decoration: none;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+	-webkit-font-variant-ligatures: none;
+  font-variant-ligatures: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 1.2;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  color: #111;
+  background: #E9E9E6;
+}
+
+b {
+	font-weight: 700;
+}
+
+img {
+	display: block;
+}
+
+::-moz-selection {
+  color: #fff;
+  background: #111;
+}
+
+::selection {
+  color: #fff;
+  background: #111;
+}
+
+.main {
+  width: 100%;
+  min-width: 300px;
+  padding: 50px 0;
+  overflow: hidden;
+}
+
+.main_container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Menu */
+
+.container_menu {
+  width: 100%;
+  margin: 0 0 35px 0;
+  padding: 0 10px;
+
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.mobile-menu-button {
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  top: 0; left: 0px;
+  background-color: #151514;
+  background-image: url(../images/menu.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 20px;
+  z-index: 98;
+  cursor: pointer;
+  display: none;
+}
+
+.mobile-menu-button.checked {
+  background-image: url(../images/close.svg);
+  background-size: 14px;
+}
+
+.menu_menu-item {
+  background: #111;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin: 5px;
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-align: center;
+
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+}
+
+.menu_menu-item:hover {
+  background: #444;
+}
+
+/* Content */
+
+.container_content {
+  width: 100%;
+  position: relative;
+
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.content_catalog {
+  width: 100%;
+
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+}
+
+.catalog_catalog-item {
+  width: 250px;
+  background: #fff;
+  margin: 15px;
+  cursor: pointer;
+  position: relative;
+
+  -webkit-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.25);
+  box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.25);
+
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.catalog_catalog-item:hover .catalog-item_image {
+  opacity: 0.8;
+}
+
+.catalog-item_image {
+  width: 100%;
+  height: 250px;
+  position: relative;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  -webkit-transition: all .25s;
+  -o-transition: all .25s;
+  transition: all .25s;
+}
+
+.catalog-item_price {
+  position: absolute;
+  top: 10px; right: 10px;
+  background: #c5aa76;
+  color: #fff;
+  padding: 5px 10px;
+}
+
+.catalog-item_description {
+  width: 100%;
+  padding: 0 20px 20px 20px;
+  font-size: 0.75rem;
+  letter-spacing: 0.5px;
+  text-align: center;
+
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.catalog-item_text {
+  width: 100%;
+  padding: 0 20px;
+  margin: 0 0 10px 0;
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  text-align: center;
+
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 1470px) {
+  .menu_menu-item {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .main_container {
+    max-width: 100%;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .mobile-hidden {
+    display: none !important;
+  }
+
+  .mobile-menu-button {
+    display: block;
+  }
+
+  .container_menu {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    color: #fff;
+    background: rgba(21, 21, 20, 0.9);
+    position: fixed;
+    top: 0; left: 0;
+    z-index: 97;
+
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+
+  .menu_menu-item {
+    -webkit-box-flex: unset;
+    -ms-flex: unset;
+    flex: unset;
+  }
+
+  .menu_menu-item, .menu_menu-item:hover {
+    background: rgba(0,0,0,0);
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .main {
+    padding: 40px 0 0 0;
+  }
+
+  .content_catalog {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+}
+
+.hidden {
+	display: none !important;
+}
